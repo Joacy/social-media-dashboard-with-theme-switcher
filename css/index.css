@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    background: hsl(0, 0%, 100%);
+    color: hsl(230, 17%, 14%);
+}
+
+div.box {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background: hsl(225, 100%, 98%);
+    padding-top: 30px;
+    padding-bottom: 150px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+header h3 {
+    color: hsl(228, 12%, 44%);
+}
+
+header div.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    margin-bottom: 50px;
+}
+
+main div.social-media-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    margin-top: -100px;
+    margin-bottom: 50px;
+}
+
+main div.social-media-cards div.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 15px 25px;
+    height: 200px;
+    background: hsl(227, 47%, 96%);
+    border-radius: 4px;
+}
+
+main h2 {
+    color: hsl(228, 12%, 44%);
+    margin-bottom: 30px;
+}
+
+main div.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    margin-bottom: 50px;
+}
+
+main div.overview-cards div.overview-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 15px 25px;
+    background: hsl(227, 47%, 96%);
+    border-radius: 4px;
+}
+
+main div.overview-cards div.overview-card div.media {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+main div.overview-cards div.overview-card div.stats {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+footer {
+    background: hsl(225, 100%, 98%);
+    padding: 25px 0;
+}
+
+footer .attribution {
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    color: hsl(230, 17%, 14%);
+}
+
+footer .attribution a {
+    text-decoration: none;
+    color: hsl(230, 17%, 14%);
+}
+
+@media screen and (max-width: 991px) {
+    div.box {
+        max-width: 800px;
+    }
+
+    main div.social-media-cards,
+    main div.overview-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    div.box {
+        max-width: 100%;
+    }
+
+    main div.social-media-cards,
+    main div.overview-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
