@@ -56,10 +56,70 @@ main div.social-media-cards div.card {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 15px 25px;
-    height: 200px;
+    padding: 25px;
     background: hsl(227, 47%, 96%);
     border-radius: 4px;
+    position: relative;
+}
+
+main div.social-media-cards div.card .facebook,
+main div.social-media-cards div.card .twitter,
+main div.social-media-cards div.card .instagram,
+main div.social-media-cards div.card .youtube {
+    border-radius: 4px 4px 0px 0px;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+main div.social-media-cards div.card .facebook {
+    background: hsl(208, 92%, 53%);
+}
+
+main div.social-media-cards div.card .instagram {
+    background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+main div.social-media-cards div.card .twitter {
+    background: hsl(203, 89%, 53%);
+}
+
+main div.social-media-cards div.card .youtube {
+    background: hsl(348, 97%, 39%);
+}
+
+main div.social-media-cards div.card div.media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+main div.social-media-cards div.card div.media img {
+    margin-right: 10px;
+}
+
+main div.social-media-cards div.card div.media h5 {
+    font-size: 13px;
+    color: hsl(228, 12%, 44%);
+}
+
+main div.social-media-cards div.card h1 {
+    font-size: 56px;
+}
+
+main div.social-media-cards div.card h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: hsl(228, 12%, 44%);
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+main div.social-media-cards div.card h6 {
+    font-size: 12px;
 }
 
 main h2 {
@@ -79,7 +139,7 @@ main div.overview-cards div.overview-card {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 15px 25px;
+    padding: 25px;
     background: hsl(227, 47%, 96%);
     border-radius: 4px;
 }
@@ -91,10 +151,19 @@ main div.overview-cards div.overview-card div.media {
     margin-bottom: 15px;
 }
 
+main div.overview-cards div.overview-card div.media h5 {
+    font-size: 13px;
+    color: hsl(228, 12%, 44%);
+}
+
 main div.overview-cards div.overview-card div.stats {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+}
+
+main div.overview-cards div.overview-card div.stats h6 {
+    font-size: 12px;
 }
 
 footer {
@@ -128,6 +197,13 @@ footer .attribution a {
 @media screen and (max-width: 576px) {
     div.box {
         max-width: 100%;
+    }
+
+    header div.box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 
     main div.social-media-cards,
